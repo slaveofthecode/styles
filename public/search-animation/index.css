@@ -1,0 +1,100 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-content;
+	outline: none;
+}
+
+footer {
+	position: fixed;
+	bottom: 1em;
+	left: 0;
+	right: 0;
+	text-align: center;
+}
+
+div.container {
+	background: linear-gradient(to bottom, black, gray);
+	position: relative;
+	height: 100vh;
+	font-size: 1.5em;
+}
+
+div.section-search {
+	display: flex;
+	justify-content: space-around;
+	height: 3em;
+	width: 50%;
+	min-width: 300px;
+	position: absolute;
+	top: calc(50% - (3em / 2));
+	left: calc(50% - (50% / 2));
+}
+
+div.section-search > [type="text"] {
+	background: rgba(0, 0, 0, 0.5);
+	color: white;
+	letter-spacing: 2px;
+	border-style: none;
+	border: 1px solid rgba(128, 128, 128, 0.25);
+	border-radius: 10px 0 0 10px;
+	padding: 1em;
+	flex: 4;
+}
+
+div.section-search > button {
+	background: rgba(0, 0, 0, 0.75);
+	color: rgba(255, 255, 255, 1);
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	border-style: none;
+	border: 1px solid rgba(128, 128, 128, 0.25);
+	border-radius: 0 10px 10px 0;
+	flex: 1;
+}
+
+div.section-search-moveTop {
+	animation: moveTop 1.25s ease-in forwards;
+}
+
+div.section-search-resetMoveTop {
+	animation: resetMoveTop 0.5s linear forwards;
+}
+
+@keyframes moveTop {
+	0% {
+		position: fixed;
+		top: calc(50% - (3em / 2));
+		left: calc(50% - (50% / 2));
+	}
+
+	25% {
+		top: -10%;
+	}
+
+	30% {
+		top: 3em;
+	}
+
+	80% {
+		top: 2em;
+	}
+
+	100% {
+		top: 2em;
+		left: 2em;
+	}
+}
+
+@keyframes resetMoveTop {
+	from {
+		position: fixed;
+		top: 1em;
+		left: 1em;
+	}
+
+	to {
+		top: calc(50% - (3em / 2));
+		left: calc(50% - (50% / 2));
+	}
+}
