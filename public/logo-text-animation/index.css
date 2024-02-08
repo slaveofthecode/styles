@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+
+:root {
+	--delay-animation-text: 10s;
+	--delay-animation-bar: 12s;
+	--delay-animation-each-letter: 500ms;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	transition: all 0.25s 0s ease;
+}
+
+html,
+body {
+	font-family: "Roboto", sans-serif;
+	height: 50vh;
+	background: #232222;
+}
+
+ul > li {
+	list-style: none;
+}
+
+article {
+	margin: 10% auto;
+	width: 250px;
+	height: 90px;
+	position: relative;
+}
+
+footer {
+	position: fixed;
+	bottom: 1em;
+	left: 0;
+	right: 0;
+	text-align: center;
+}
+
+.bar-orange {
+	width: 15px;
+	height: 100%;
+	background: orange;
+	float: left;
+	animation: barInit var(--delay-animation-bar) 0s ease-in forwards;
+	z-index: 10;
+}
+@keyframes barInit {
+	0% {
+		box-shadow: none;
+	}
+	10% {
+		box-shadow: 5px 1px 15px -2px rgba(255, 166, 0, 0.5);
+	}
+	90% {
+		box-shadow: 5px 1px 15px -2px rgba(255, 166, 0, 0.15);
+	}
+	100% {
+		box-shadow: none;
+		background: rgb(108, 70, 1);
+	}
+}
+
+.letters {
+	font-size: 4em;
+	font-weight: bold;
+	display: flex;
+	height: 100%;
+	padding: 0 0 0 5px;
+}
+.letters > li {
+	color: rgba(136, 242, 219, 0.435);
+	opacity: 0;
+	transform: translateX(-20px);
+	z-index: 0;
+}
+
+.letters > li:nth-child(1) {
+	animation: letter var(--delay-animation-each-letter) 2s linear forwards;
+}
+.letters > li:nth-child(2) {
+	animation: letter var(--delay-animation-each-letter) 2.5s linear forwards;
+}
+.letters > li:nth-child(3) {
+	animation: letter var(--delay-animation-each-letter) 3s linear forwards;
+}
+.letters > li:nth-child(4) {
+	animation: letter var(--delay-animation-each-letter) 3.5s linear forwards;
+}
+.letters > li:nth-child(5) {
+	animation: letter var(--delay-animation-each-letter) 4s linear forwards;
+}
+.letters > li:nth-child(6) {
+	animation: letter var(--delay-animation-each-letter) 4.5s linear forwards;
+}
+.letters > li:nth-child(7) {
+	animation: letter var(--delay-animation-each-letter) 5s linear forwards;
+}
+.letters > li:nth-child(8) {
+	animation: letter var(--delay-animation-each-letter) 5.5s linear forwards;
+}
+.letters > li:nth-child(9) {
+	animation: letter var(--delay-animation-each-letter) 6s linear forwards;
+}
+.letters > li:nth-child(10) {
+	animation: letter var(--delay-animation-each-letter) 6.5s linear forwards;
+}
+.letters > li:nth-child(11) {
+	animation: letter var(--delay-animation-each-letter) 7s linear forwards;
+}
+.letters > li:nth-child(12) {
+	animation: letter var(--delay-animation-each-letter) 7.5s linear forwards;
+}
+.letters > li:nth-child(13) {
+	animation: letter var(--delay-animation-each-letter) 8s linear forwards;
+}
+.letters > li:nth-child(14) {
+	animation: letter var(--delay-animation-each-letter) 8.5s linear forwards;
+}
+
+@keyframes letter {
+	0% {
+		opacity: 0;
+		transform: translateX(-20px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+.text {
+	position: absolute;
+	bottom: 7.5px;
+	left: 4em;
+	color: transparent;
+	animation: showText 2s var(--delay-animation-text) forwards;
+}
+
+@keyframes showText {
+	0% {
+		color: transparent;
+	}
+	100% {
+		color: gray;
+	}
+}
