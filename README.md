@@ -22,7 +22,7 @@ I have decided to put them all in one place so that I can easily access them and
 
 ## Some stack techs used in this project
 
-<img src="https://cdn.worldvectorlogo.com/logos/logo-javascript.svg"  style="height: 100px; width:100px;" />
-<img src="https://cdn.worldvectorlogo.com/logos/pug.svg"  style="height: 100px; width:100px;" />
-<img src="https://cdn.worldvectorlogo.com/logos/nodejs.svg"  style="height: 100px; width:100px;" />
-<img src="https://cdn.worldvectorlogo.com/logos/git-icon.svg"  style="height: 100px; width:100px;" />
+<img src="https://cdn.worldvectorlogo.com/logos/logo-javascript.svg"  style="height: 50px; width:50px;" />
+<img src="https://cdn.worldvectorlogo.com/logos/pug.svg"  style="height: 50px; width:50px;" />
+<img src="https://cdn.worldvectorlogo.com/logos/nodejs.svg"  style="height: 50px; width:50px;" />
+<img src="https://cdn.worldvectorlogo.com/logos/git-icon.svg"  style="height: 50px; width:50px;" />
