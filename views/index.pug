@@ -1,0 +1,24 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        
+        link(rel="stylesheet", href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap")
+        link(rel="stylesheet", href="./styles/styles.css")
+        title Styles
+    body 
+        header 
+            h1= title
+
+        main 
+            ul 
+                - for (let i = 0; i < links.length; i++) {
+                    li
+                        a(href= links[i].href)= links[i].text
+                - }
+
+        footer 
+            p
+                em
+                    a(href= footer.href)= footer.text
