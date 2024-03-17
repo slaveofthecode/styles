@@ -5,6 +5,9 @@ const port = process.env.PORT || 3000;
 const app = express();
 // const __dirname = new URL(import.meta.url).pathname;
 
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
 // Set up the public directory
 app.use("/public", express.static("public"));
 app.use(express.static(__dirname + "/public"));
@@ -13,7 +16,8 @@ app.use(express.static(__dirname + "/public"));
 
 // Set up the view engine
 app.set("view engine", "pug");
-app.set("views", "./views");
+app.set("views", __dirname + "/views");
+// app.set("views", "./views");
 // ---
 
 app.get("/", (req, res) => {
