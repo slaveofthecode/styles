@@ -1,12 +1,20 @@
 // import express from "express";
 const express = require("express");
 
+const port = process.env.PORT || 3000;
 const app = express();
 // const __dirname = new URL(import.meta.url).pathname;
 
-app.use(express.static("public"));
+// Set up the public directory
+app.use("/public", express.static("public"));
+app.use(express.static(__dirname + "/public"));
+// app.use(express.static("public"));
+// ---
+
+// Set up the view engine
 app.set("view engine", "pug");
 app.set("views", "./views");
+// ---
 
 app.get("/", (req, res) => {
 	res.render("index", {
@@ -37,6 +45,6 @@ app.get("/logo-text-animation", (_, res) => {
 	res.sendFile(__dirname + "./public/logo-text-animation");
 });
 
-app.listen(3000, () => {
-	console.log("Server is running on port 3000");
+app.listen(port, () => {
+	console.log(`Server is running on port ${port}`);
 });
