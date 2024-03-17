@@ -1,7 +1,8 @@
-import express from "express";
+// import express from "express";
+const express = require("express");
 
 const app = express();
-const __dirname = new URL(import.meta.url).pathname;
+// const __dirname = new URL(import.meta.url).pathname;
 
 app.use(express.static("public"));
 app.set("view engine", "pug");
