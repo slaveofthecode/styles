@@ -5,7 +5,8 @@
 	"description": "This is a collection of styles that I have created over the years. I have decided to put them all in one place so that I can easily access them and share them with others.",
 	"main": "index.js",
 	"scripts": {
-		"dev": "nodemon server.js"
+		"dev": "nodemon server.js",
+		"start": "node server.js"
 	},
 	"author": "slaveofthecode",
 	"license": "ISC",
