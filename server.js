@@ -5,6 +5,7 @@ const __dirname = new URL(import.meta.url).pathname;
 
 app.use(express.static("public"));
 app.set("view engine", "pug");
+app.set("views", "./views");
 
 app.get("/", (req, res) => {
 	res.render("index", {
