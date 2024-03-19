@@ -18,7 +18,7 @@ body {
 		"footer";
 	grid-template-rows: auto 1fr 50px;
 	height: 100vh;
-	background-image: url("../images/background.jpg");
+	background: #000;
 }
 
 header {
@@ -39,43 +39,51 @@ main {
 
 ul {
 	list-style: none;
-	padding: 12px;
-	list-style: none;
-	padding: 12px;
+	padding: 24px;
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(224px, 1fr));
-	grid-gap: 12px;
+	grid-gap: 24px;
 }
 
 ul > li {
-	display: flex;
-	flex-direction: column;
-	gap: 12px;
-	align-items: center;
-	padding: 24px;
 	font-size: 2rem;
-	background: #9c6d3d9e;
+	background: #94918e9e;
 	border-radius: 12px;
+	transition: all 0.5s ease-in-out;
 
-	> div {
-		color: #452b12;
+	&:hover {
+		background: rgba(128, 128, 128, 0.05);
+
+		> a > div {
+			color: #fff9;
+		}
+		img {
+			transform: scale(1.1);
+			filter: drop-shadow(0 0 0.5rem black);
+		}
 	}
-}
 
-ul li:hover {
-	background: rgba(128, 128, 128, 0.25);
-}
+	> a {
+		padding: 24px;
+		width: 100%;
+		padding: 10px;
+		display: flex;
+		flex-direction: column;
+		gap: 12px;
+		align-items: center;
 
-ul > li > a {
-	width: 100%;
-	padding: 10px;
-}
+		> div {
+			transition: all 1s ease-in-out;
+			color: #0009;
 
-main > ul > li figure img {
-	width: 124px;
-	height: 124px;
-	object-fit: contain;
-	filter: drop-shadow(0 0 0.5rem black);
+			figure img {
+				width: 124px;
+				height: 124px;
+				object-fit: contain;
+				transition: all 0.5s ease-in-out;
+			}
+		}
+	}
 }
 
 footer {

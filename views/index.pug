@@ -15,11 +15,11 @@ html(lang="en")
             ul 
                 - for (let i = 0; i < links.length; i++) {
                     li
-                        div 
-                            =links[i].text
-                        div 
-                            figure
-                                a(href= links[i].href)(target="_blank")
+                        a(href= links[i].href)(target="_blank")
+                            div 
+                                =links[i].text
+                            div 
+                                figure
                                     img(src= links[i].img, alt= links[i].text)
 
                 - }
