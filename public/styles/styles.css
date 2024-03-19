@@ -64,7 +64,7 @@ ul > li {
 	}
 
 	> a {
-		padding: 24px;
+		height: 100%;
 		width: 100%;
 		padding: 10px;
 		display: flex;
@@ -75,12 +75,14 @@ ul > li {
 		> div {
 			transition: all 1s ease-in-out;
 			color: #0009;
+			padding: 9px;
 
 			figure img {
-				width: 124px;
-				height: 124px;
+				width: 100%;
+				height: auto;
 				object-fit: contain;
 				transition: all 0.5s ease-in-out;
+				border-radius: 8px;
 			}
 		}
 	}
