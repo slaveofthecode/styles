@@ -16,17 +16,20 @@ body {
 		"header"
 		"content"
 		"footer";
-	grid-template-rows: auto 1fr 75px;
+	grid-template-rows: auto 1fr 50px;
 	height: 100vh;
+	background-image: url("../images/background.jpg");
 }
 
 header {
 	border-bottom: 2px solid black;
 	grid-area: header;
+	position: sticky;
+	top: 0;
 }
 header > h1 {
 	padding: 25px;
-	background: rgb(66 64 64);
+	background: #42404065;
 	color: rgba(255, 255, 255, 1);
 }
 
@@ -36,13 +39,27 @@ main {
 
 ul {
 	list-style: none;
+	padding: 12px;
+	list-style: none;
+	padding: 12px;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(224px, 1fr));
+	grid-gap: 12px;
 }
 
 ul > li {
 	display: flex;
-	justify-content: space-between;
+	flex-direction: column;
+	gap: 12px;
 	align-items: center;
-	border-bottom: 1px solid #f2f2f2;
+	padding: 24px;
+	font-size: 2rem;
+	background: #9c6d3d9e;
+	border-radius: 12px;
+
+	> div {
+		color: #452b12;
+	}
 }
 
 ul li:hover {
@@ -54,9 +71,16 @@ ul > li > a {
 	padding: 10px;
 }
 
+main > ul > li figure img {
+	width: 124px;
+	height: 124px;
+	object-fit: contain;
+	filter: drop-shadow(0 0 0.5rem black);
+}
+
 footer {
-	background: rgba(128, 128, 128, 0.5);
-	padding: 20px;
+	background: #80808085;
+	padding: 12px;
 	font-size: 12px;
 	grid-area: footer;
 	display: flex;

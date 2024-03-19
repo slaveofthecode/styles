@@ -15,10 +15,16 @@ html(lang="en")
             ul 
                 - for (let i = 0; i < links.length; i++) {
                     li
-                        a(href= links[i].href)= links[i].text
+                        div 
+                            =links[i].text
+                        div 
+                            figure
+                                a(href= links[i].href)(target="_blank")
+                                    img(src= links[i].img, alt= links[i].text)
+
                 - }
 
         footer 
             p
-                em
+                strong
                     a(href= footer.href)= footer.text

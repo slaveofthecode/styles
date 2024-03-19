@@ -11,27 +11,45 @@ app.use(express.urlencoded({ extended: true }));
 // Set up the public directory
 app.use("/public", express.static("public"));
 app.use(express.static(__dirname + "/public"));
-// app.use(express.static("public"));
 // ---
+
+// Set up images directory
+app.use("/images", express.static("images"));
+app.use(express.static(__dirname + "/images"));
 
 // Set up the view engine
 app.set("view engine", "pug");
 app.set("views", __dirname + "/views");
-// app.set("views", "./views");
 // ---
 
 app.get("/", (req, res) => {
 	res.render("index", {
 		title: "Styles",
 		links: [
-			{ href: "/input-shadows", text: "Input Shadows" },
-			{ href: "/paper-shadow", text: "Paper Shadows" },
-			{ href: "/search-animation", text: "Search Animation" },
-			{ href: "/logo-text-animation", text: "Logo Text Animation" },
+			{
+				href: "/input-shadows",
+				text: "Input Shadows",
+				img: "/images/input-shadows.png",
+			},
+			{
+				href: "/paper-shadow",
+				text: "Paper Shadows",
+				img: "/images/paper-shadows.png",
+			},
+			{
+				href: "/search-animation",
+				text: "Search Animation",
+				img: "/images/search-animation.png",
+			},
+			{
+				href: "/logo-text-animation",
+				text: "Logo Text Animation",
+				img: "/images/logo-text-animation.png",
+			},
 		],
 		footer: {
 			text: "slaveofthecode",
-			href: "https://www.linkedin.com/in/gustavoml/",
+			href: "https://slaveofthecode.vercel.app/",
 		},
 	});
 });
