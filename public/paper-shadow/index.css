@@ -49,14 +49,17 @@ body {
 	color: rgba(128, 128, 128, 0);
 	z-index: -1;
 	animation: by-me 6s 4s ease forwards;
+	font-family: cursive;
 }
 
 .paper > p {
 	font-weight: 900;
 	color: rgba(0, 0, 0, 0.85);
 	font-size: 2em;
-	text-shadow: 3px 3px 5px grey;
+	text-shadow: 1px 4px 6px grey;
 	animation: text-under 2s 4s linear forwards;
+	font-family: fantasy;
+	letter-spacing: 6px;
 }
 
 .paper > p:before {
@@ -100,19 +103,19 @@ body {
 @keyframes by-me {
 	0% {
 		bottom: 5px;
-		color: rgba(128, 128, 128, 0);
+		color: #888;
 		z-index: -1;
 	}
 	60% {
 		bottom: -30px;
 		z-index: -1;
-		color: rgba(128, 128, 128, 0.5);
+		color: #8887;
 		transform: scale(1.25);
 	}
 	100% {
 		bottom: 5px;
 		z-index: 10;
-		color: rgba(0, 0, 0, 1);
+		color: #000;
 		transform: scale(1);
 	}
 }
