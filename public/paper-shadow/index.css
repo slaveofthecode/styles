@@ -22,6 +22,11 @@ footer {
 
 body {
 	background: rgba(255, 255, 255, 0.75);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: calc(100vh - (200px / 2));
 }
 
 .re-play {
@@ -37,7 +42,7 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	margin: calc((100vh - 200px) / 2) auto;
+	/* margin: calc((100vh - 200px) / 2) auto; */
 	background: rgba(245, 245, 245, 1);
 	border-radius: 5px;
 	transition: all 0.25s 0s ease;
@@ -117,5 +122,22 @@ body {
 		z-index: 10;
 		color: #000;
 		transform: scale(1);
+	}
+}
+
+@media (max-width: 768px) {
+	.paper {
+		width: 300px;
+		height: 150px;
+	}
+	.paper > p {
+		font-size: 1.25em;
+		letter-spacing: normal;
+	}
+	.paper > p:before {
+		width: 200px;
+	}
+	.paper > p:after {
+		width: 200px;
 	}
 }
